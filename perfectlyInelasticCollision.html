@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Collision - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+        <div id = 'header'>
+          <h1>One Dimension Perfectly Inelastic Collisions</h1>
+          <p>In a Perfectly Inelastic Collision, the two objects that collide together become one during the collision, effectively combining their masses. Think, for instance, of a bullet wedged inside a target, or an arrow stuck inside an apple. Given the Law of Conservation of Momentum we can calculate the velocity of an combined object, given the approach velocities of the objects and their masses.<br><br>
+            Input all but one value in the table and the last one will fill when you hit solve. The right box will display the change in energy before and after the collision. If you only know the approach velocity and not the velocity of each object, input 0 for the initial velocity of object 1 and the approach velocity as the velocity of object 2.</p>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Collision Data</h1>
+          <table class='zebra'>
+            <form id = 'inputPerfectlyElasticCollision' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Mass of Object 1</td>
+                <td><input id='m1' type='number'></td>
+              </tr>
+              <tr>
+                <td>Velocity of Object 1</td>
+                <td><input id='v1' type='number'></td>
+              </tr>
+              <tr>
+                <td>Mass of Object 2</td>
+                <td><input id='m2' type='number'></td>
+              </tr>
+              <tr>
+                <td>Velocity of Object 2</td>
+                <td><input id = 'v2' type = 'number'></td>
+              </tr>
+              <tr>
+                <td>Combined Final Velocity</td>
+                <td><input id='vf' type = 'number'></td>
+              </tr>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='CalculatePerfectlyInelasticCollision()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id = 'genOutput'>
+          <h1>Output</h1>
+          <p id='energy'></p>
+          <p id='answer'></p>
+        </div>
+
+      </body>

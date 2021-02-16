@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Units - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+      <div id = 'header'>
+        <h1>Units Converter</h1>
+        <p>This calculator will allow you easily convert units between different magnitudes while accounting for dimension. This is done by finding the difference in magnitude between the initial and final units, multiplying that value by the amount of dimensions, raising 10 to that value, and finally multiplying the orginal value by that product.
+      </div>
+      <div id = 'genInput'>
+        <h1>Input Units</h1>
+
+        <table class = 'zebra'>
+          <form id = 'unitsInputForm' action = 'physicsCalculator.js'>
+
+            <tr>
+              <td>Value</td>
+              <td><input id = 'unitsInputValue' type = 'text' placeholder = 'Enter Value'></td>
+            </tr>
+
+            <tr>
+              <td>Units Magnitude</td>
+              <td>
+                <select id = 'unitsInputMagnitude'>
+                <option value='12'>Terra (* 10 &sup1&sup2, T)</option>
+                <option value='9'>Giga (* 10 &#x2079;, G)</option>
+                <option value='6'>Mega (* 10 &#x2076;, M)</option>
+                <option value='3'>Kilo (* 10 &sup3, k)</option>
+                <option value='2'>Hecto (* 10 &sup2>, h)</option>
+                <option value='1'>Deca (* 10 &sup1, da)</option>
+                <option value='0'>One</option>
+                <option value='-1'>Deci (* 10 &#8315&sup1, d)</option>
+                <option value='-2'>Centi (* 10 &#8315&sup2, c)</option>
+                <option value='-3'>Milli (* 10 &#8315&sup3, m)</option>
+                <option value='-6'>Micro (* 10 &#8315&#x2076;, &#181)</option>
+                <option value='-9'>Nano (* 10 &#8315&#x2079;, n)</option>
+                <option value='-12'>Pico (* 10 &#8315&sup1&sup2, p)</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Units</td>
+              <td>
+                <select id = 'unitsInputUnits'>
+                  <option value = 'kelvin'>Kelvin (Temperature)</option>
+                  <option value = 'meters'>Meters (Distance)</option>
+                  <option value = 'amperes'>Amps (Current)</option>
+                  <option value = 'seconds'>Seconds (Time)</option>
+                  <option value = 'moles'>Moles (Substance Quantity)</option>
+                  <option value = 'grams'>Kilograms/Grams (Mass)</option>
+                  <option value = 'candela'>Candela (Luminous Intensity)</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Dimension</td>
+              <td>
+                <select id = 'unitsInputDimension'>
+                  <option value='1'>One Dimension</option>
+                  <option value='2'>Two Dimension</option>
+                  <option value='3'>Three Dimension</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Output Units Magnitude</td>
+              <td>
+                <select id = 'unitsOutputMagnitude'>
+                  <option value='12'>Terra (* 10 &sup1&sup2), T)</option>
+                  <option value='9'>Giga (* 10 &#x2079;, G)</option>
+                  <option value='6'>Mega (* 10 &#x2076;, M)</option>
+                  <option value='3'>Kilo (* 10 &sup3, k)</option>
+                  <option value='2'>Hecto (* 10 &sup2>, h)</option>
+                  <option value='1'>Deca (* 10 &sup1, da)</option>
+                  <option value='0'>One</option>
+                  <option value='-1'>Deci (* 10 &#8315&sup1, d)</option>
+                  <option value='-2'>Centi (* 10 &#8315&sup2, c)</option>
+                  <option value='-3'>Milli (* 10 &#8315&sup3, m)</option>
+                  <option value='-6'>Micro (* 10 &#8315&#x2076;, &#181)</option>
+                  <option value='-9'>Nano (* 10 &#8315&#x2079;, n)</option>
+                  <option value='-12'>Pico (* 10 &#8315&sup1&sup2, p)</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2"><input type="button" class='greenButton' onclick="CalculateUnits()" value = "Submit"></td>
+            </tr>
+          </form>
+        </table>
+      </div>
+      <div id = 'genOutput'>
+        <h1>Output Units</h1>
+        <p id="unitsAnswer">Solution</p>
+      </div>
+  </body>

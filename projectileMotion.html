@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Projectile Motion - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+
+        <div id = 'header'>
+          <h1>Projectile Motion</h1>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Projectile Data</h1>
+          <table class='zebra'>
+            <form id = 'inputProjectileMotionData' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Start Position</td>
+                <td><input id = 'si' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>End Position</td>
+                <td><input id = 'sf' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Initial Velocity</td>
+                <td><input id = 'vi' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity</td>
+                <td><input id = 'vf' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Acceleration</td>
+                <td><input id = 'a' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Time</td>
+                <td><input id = 't' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Solve For: </td>
+                <td>
+                  <select id = 'solveFor'>
+                    <option value = 'si'>Start Position</option>
+                    <option value = 'sf'>End Position</option>
+                    <option value = 'vi'>Start Velocity</option>
+                    <option value = 'vf'>End Velocity</option>
+                    <option value = 'a'>Acceleration</option>
+                    <option value = 't'>Time</option>
+                  </select>
+                </td>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='Calculate1DKinematics()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id='genOutput'>
+          <h1>Output</h1>
+          <p id='output1DKinematics'></p>
+        </div>
+      </body>

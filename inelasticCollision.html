@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Collision - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+        <div id = 'header'>
+          <h1>One Dimension Inelastic Collisions</h1>
+          <p>In an inelastic collision, energy is lost in collision despite momentum remaining constant, which is different from a Perfectly Elastic Collision. The objects collide, but do not merge together as they would in a Perfectly Inelastic Collision.<br><br>
+            Input five values of data into the table, and the last one will fill when you hit solve. The right box will display the change in energy before and after the collision.</p>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Collision Data</h1>
+          <table class='zebra'>
+            <form id = 'inputOneDimensionElasticCollision' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Mass of Object 1</td>
+                <td><input id = 'm1' type = 'number'></td>
+              <tr>
+                <td>Velocity of Object 1</td>
+                <td><input id='v1' type='number'></td>
+              <tr>
+                <td>Mass of Object 2</td>
+                <td><input id='m2' type='number'></td>
+              </tr>
+              <tr>
+                <td>Velocity of Object 2</td>
+                <td><input id = 'v2' type = 'number'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity Object 1</td>
+                <td><input id='v1f' type = 'number'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity Object 2</td>
+                <td><input id='v2f' type = 'number'></td>
+              </tr>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='CalculateInelasticCollision()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id = 'genOutput'>
+          <h1>Change in Energy</h1>
+          <p id = 'energy'></p>
+          <p id='answer'></p>
+        </div>
+
+      </body>

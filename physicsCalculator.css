@@ -1,0 +1,232 @@
+body{
+  margin-left:0px;
+  margin-right:0px;
+  padding-top:0px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  font-family:Montserrat;
+}
+
+nav {
+  margin: 0px;
+  padding: 0px;
+
+  width:100%;
+  height:50px;
+  background-color:#124E78;
+}
+
+nav > ul{
+  display:flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin:50px;
+  margin-top:0px;
+  padding-right:50px;
+  font-size:24px;
+  padding-top:10px;
+}
+
+nav > ul > li{
+  border-left: 1px solid white;
+  padding-left:20px;
+}
+
+nav > ul > li > a{
+  color:white;
+  text-decoration:none;
+}
+
+h3{
+  margin-bottom:25px;
+}
+
+#header {
+  margin-left:8%;
+  margin-right:8%;
+  margin-top:2%;
+}
+
+#header h1{
+  font-size:40px;
+  text-align:center;
+}
+
+#header p{
+  font-size: 20px;
+}
+
+#genInput {
+  float:left;
+  width:40%;
+  height:50%;
+  margin-top:10%;
+  margin-left:5%;
+  border: 5px solid blue;
+  background-color: #81bcde;
+}
+
+#genInput h1{
+  text-align:center;
+}
+
+.zebra {
+  border: 1px solid black;
+  margin-bottom:2px;
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+  margin-bottom:5%
+}
+
+.zebra td{
+  text-align:center;
+}
+
+.zebra input{
+  width:90%;
+}
+
+.zebra tr:nth-child(odd){
+  background-color: #d3d3d3;
+}
+
+.zebra tr:nth-child(even){
+  background-color:white;
+}
+
+.zebra td:nth-child(even){
+  border-left: .5px solid black;
+  border-bottom:.5px solid black;
+}
+
+.zebra td:nth-child(odd){
+  border-bottom: .5px solid black;
+  font-size:20px;
+}
+
+.greenButton{
+  margin-top:2px;
+  width:100%;
+  background-color:#00a33f;
+  font-size: 22px;
+  font-weight: bold;
+  color:white;
+}
+
+.zebra td [id="unitsInputValue"]{
+  width:50%;
+}
+
+#genOutput{
+  float: right;
+  margin-right:5%;
+  width:40%;
+  margin-top:10%;
+  height:50%;
+  border: 5px solid red;
+  padding-bottom:1%;
+  background-color:#e69d91;
+}
+
+#genOutput h1{
+  text-align:center;
+}
+
+#genOutput p{
+  padding-top:15px;
+  text-align:center;
+  font-size: 30px;
+  font-weight:bold;
+}
+
+.varTable {
+  width:auto;
+  margin-top: 20px;
+  margin-right:5%;
+  margin-left: 5%;
+  float:right;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  background-color:lightblue;
+}
+.varTable td{
+  text-align:center;
+  width: 300px;
+  border-bottom: .5px solid black;
+  border-right: .5px solid black;
+}
+
+.varTable tr[value='head']{
+  background-color:lightgray;
+}
+
+.flexTiles {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  margin-left:10%;
+
+  width:80%;
+  justify-content:left;
+
+}
+
+.flexTiles > div{
+  margin:30px;
+  margin-bottom:20px;
+  border-radius: 10px;
+  border:.5px solid gray;
+  text-align:center;
+  width:330px;
+  background-color:#dde3ed;
+}
+
+.flexTiles > div > a> div{
+  position:relative;
+  text-align:center;
+  align-items:center;
+  background-color:lightgray;
+  border-radius:0px 0px 10px 10px;
+  height:300px;
+  width:330px;
+}
+
+.flexTiles > div > a{
+  color:#124E78;
+}
+
+.flexTiles > div > a > div > img{
+  margin:0px;
+  height:100%;
+  width:100%;
+}
+
+.flexTilesDescription{
+  margin:0px;
+  display:flex;
+  justify-content: center;
+  flex-direction:column;
+  font-size:20px;
+  text-align:center;
+  vertical-align:middle;
+  background-color:lightgray;
+  position: absolute;
+  padding-left:5%;
+  padding-right: 5%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  border-radius: 0px 0px 10px 10px;
+  line-height: 30px;
+  visibility:hidden;
+  opacity:0;
+
+  transition: opacity .2s, visibility .2s;
+}
+
+.flexTiles div a div:hover .flexTilesDescription{
+  visibility:visible;
+  opacity:.9;
+}

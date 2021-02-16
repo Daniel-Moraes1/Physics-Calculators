@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Collision - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+        <div id = 'header'>
+          <h1>One Dimension Elastic Collisions</h1>
+          <p>In a Perfectly Elastic Collision, energy in a system must be conserved before and after a collision. Assuming the masses of the objects do not change, the only way for this to be possible is if the velocity at which the objects approach is equal to the velocity at which they separate. We can use this to calculate the velocity of an object, given the approach velocities of the objects and the final velocity of one object.<br><br>
+            Input 3 values of data into the table, and the last one will fill when you hit solve. The right box will display the change in energy before and after the collision. If you only know the approach velocity and not the velocity of each object, input 0 for the initial velocity of object 1 and the approach velocity as the velocity of object 2.</p>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Collision Data</h1>
+          <table class='zebra'>
+            <form id = 'inputPerfectlyElasticCollision' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Velocity of Object 1</td>
+                <td><input id='v1' type='number'></td>
+              <tr>
+                <td>Velocity of Object 2</td>
+                <td><input id = 'v2' type = 'number'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity Object 1</td>
+                <td><input id='v1f' type = 'number'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity Object 2</td>
+                <td><input id='v2f' type = 'number'></td>
+              </tr>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='CalculatePerfectlyElasticCollision()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id = 'genOutput'>
+          <h1>Output</h1>
+          <p id='approach'></p>
+          <p id='answer'></p>
+        </div>
+
+      </body>

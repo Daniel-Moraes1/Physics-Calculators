@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>1D Kinematics - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+
+        <div id = 'header'>
+          <h1>One Dimension Kinematics</h1>
+          <p>The purpose of this calculator is to solve problems related to one directional, forceless motion. While this may initially appear unhelpful in real world applications, one dimension kinematics can be use to solve problems such as measuring a sprinters acceleration or race time, or a car's velocity.<br><br>
+            It is important to understand the relationship between Position, Velocity, and Acceleration. Velocity * Time = Change in Position, and Acceleration * Time = Change in Velocity. In other words, Velocity is the derivative of Position with respect to Time, and Acceleration is the derivative of Velocity with respect to Time.<br><br>
+          *Note: Leave values blank if unknown, not 0. By the nature of these equations, some calculations may occur if impossible values are input*</p>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Kinematics Data</h1>
+          <table class='zebra'>
+            <form id = 'inputOneDimensionKinematics' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Start Position</td>
+                <td><input id = 'si' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>End Position</td>
+                <td><input id = 'sf' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Initial Velocity</td>
+                <td><input id = 'vi' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Final Velocity</td>
+                <td><input id = 'vf' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Acceleration</td>
+                <td><input id = 'a' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Time</td>
+                <td><input id = 't' type = 'text'></td>
+              </tr>
+              <tr>
+                <td>Solve For: </td>
+                <td>
+                  <select id = 'solveFor'>
+                    <option value = 'si'>Start Position</option>
+                    <option value = 'sf'>End Position</option>
+                    <option value = 'vi'>Start Velocity</option>
+                    <option value = 'vf'>End Velocity</option>
+                    <option value = 'a'>Acceleration</option>
+                    <option value = 't'>Time</option>
+                  </select>
+                </td>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='Calculate1DKinematics()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id='genOutput'>
+          <h1>Output</h1>
+          <p id='output1DKinematics'></p>
+        </div>
+
+        <div class = 'varTable'>
+            <table>
+              <tr value = 'head'>
+                <td>Solve For:</td>
+                <td colspan = '4'>Options:</td>
+              </tr>
+              <tr>
+                <td>Start Position</td>
+                <td>sf, vi, t</td>
+                <td>sf, vi, a, t</td>
+                <td>sf, vi, vf, a</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>End Position</td>
+                <td>si, vi, t</td>
+                <td>si, vi, a, t</td>
+                <td>si, vi, vf, a</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Initial Velocity</td>
+                <td>si, sf, t</td>
+                <td>si, sf, a, t</td>
+                <td>si, sf, vf, a</td>
+                <td>vf, a, t</td>
+              </tr>
+              <tr>
+                <td>Final Velocity</td>
+                <td>vi, a, t</td>
+                <td>si, sf, vi, a</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Acceleration</td>
+                <td>si, sf, vi, t</td>
+                <td>vi, vf, t</td>
+                <td>si, sf, vi, vf</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Time</td>
+                <td>si, sf, vi</td>
+                <td>si, sf, vi, a,</td>
+                <td>vi, vf, a</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+      </body>

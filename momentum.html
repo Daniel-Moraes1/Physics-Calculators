@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Momentum - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+        <div id = 'header'>
+          <h1>Momentum</h1>
+          <p>Momentum is a vector value that is the product of mass * velocity. Because the law of conservation of momentum states that total momentum in closed system before a collision is equal to the total momentum in a system after a collision, we can calculate the expected velocities of objects after a collision. Check out <a href='collisions.html'>these collision calculators</a> to solve collision problems.<br><br>
+          For this calculator, put values in two of the boxes, and the third box will fill when you hit solve.</p>
+        </div>
+
+        <div id = 'genInput'>
+          <h1>Input Momentum Data</h1>
+          <table class='zebra'>
+            <form id = 'inputMomentumData' action = 'physicsCalculator.js'>
+              <tr>
+                <td>Mass</td>
+                <td><input id = 'm' type = 'text'></td>
+              <tr>
+                <td>Velocity</td>
+                <td><input id='v' type='text'></td>
+              <tr>
+                <td>Momentum</td>
+                <td><input id='p' type='text'></td>
+              </tr>
+              <tr>
+                <td colspan = '2'>
+                  <input type = 'button' class = 'greenButton' onClick='CalculateMomentum()' value='Solve!'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+
+        <div id = 'genOutput'>
+          <p id = 'error'></p>
+        </div>
+
+      </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vector Algebra - Physics Calculator</title>
+      <script src='physicsCalculator.js'></script>
+      <link rel='stylesheet' href='physicsCalculator.css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+      </nav>
+        <div id = 'header'>
+          <h1>Vector Algebra</h1>
+          <p>Vector are objects that have both magnitude and direction. Understanding vector is important because they model motion in the real world. Vectors can be added, substracted, and have multiple other equations and manipulations done to them. This calculator will allow you to perform addition and subtration of 2D vectors, along with finding their dot product, which can in turn be used to find the angle between them. Angles in the calculated are measured in degrees.</p>
+        </div>
+        <div id = 'genInput'>
+          <h1>Input Vector Operation</h1>
+          <table class = 'zebra'>
+            <form id='inputVectorAlgebra' action = 'physicsCalculator.js'>
+              <th>
+                <td>X</td>
+                <td>Y</td>
+              </th>
+              <tr>
+                <td>Vector 1</td>
+                <td><input id='vectorV1x' type='text'></td>
+                <td><input id='vectorV1y' type='text'></td>
+              </tr>
+              <tr>
+                <td>Operator</td>
+                <td colspan ='2'>
+                  <select id='vectorOperator'>
+                      <option value='+'>+</option>
+                      <option value='-'>-</option>
+                      <option value='x'>&middot; (dot product)</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Vector 2</td>
+                <td><input id='vectorV2x' type='text'></td>
+                <td><input id='vectorV2y' type='text'></td>
+              </tr>
+              <tr>
+                <td colspan=3>
+                  <input type='button' class='greenButton' onClick='CalculateVector()' value = 'Solve'>
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
+        <div id='genOutput'>
+          <h1>Output</h1>
+          <p id='vectorOutput'></p>
+          <p id='thetaOutput'></p>
+        </div>
+      </body>
